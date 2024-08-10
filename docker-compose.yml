@@ -1,0 +1,42 @@
+version: '3.8'  # Specify the version
+
+services:
+  php:
+    build: .
+    ports:
+      - "4040:80"
+    restart: always
+    volumes:
+      - php_apache_conf:/etc/apache2/sites-available
+      - .:/var/www/html/
+      - php_apache_global_conf:/etc/apache2/
+      - php_ini_conf:/usr/local/etc/php/
+    container_name: myphp
+
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - "8081:3306"  # MySQL usually runs on port 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: akramatik
+      MYSQL_PASSWORD: akramatik
+      MYSQL_DATABASE: test
+    volumes:
+      - mysql_data:/var/lib/mysql
+    container_name: mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db  # Link to the MySQL db service
+
+volumes:
+  php_apache_conf:
+  php_apache_global_conf:
+  mysql_data:  # Define the missing mysql_data volume
+  php_ini_conf:
