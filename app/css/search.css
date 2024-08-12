@@ -1,0 +1,36 @@
+.search-container{
+    width: 60em;
+}
+.search-container>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-container>ul>li>input{
+    width: 100%;
+    background: unset;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.search-container>ul>li>select{
+    width: 100%;
+    background: unset;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.search-li{
+    width: 80%;
+}
+
+.filter-li{
+    width: 20%;
+}

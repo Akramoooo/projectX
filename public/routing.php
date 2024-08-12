@@ -15,7 +15,7 @@ $queryFactory = new QueryFactory('sqlite');
 $containerBuilder = new ContainerBuilder();
 $containerBuilder->addDefinitions([
     PDO::class => function () {
-        return new PDO('mysql:host=mysql;dbname=test', 'root', 'akramatik');
+        return new PDO('mysql:host=mysql;dbname=ProjectX', 'root', 'akramatik');
     },
     QueryFactory::class => function () {
         return new QueryFactory('mysql');
@@ -36,6 +36,12 @@ $app = AppFactory::create();
 // Определяем маршруты
 $app->get('/', [IndexController::class, 'index']);
 $app->get('/about', [IndexController::class, 'about']);
+
+
+// COMMUNICATE WITH JAVASCRIPT
+$app->post('/get-category', [IndexController::class, 'getCategory']);
+$app->post('/search', [IndexController::class, 'search']);
+
 
 
 $app->run();

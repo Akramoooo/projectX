@@ -1,0 +1,15 @@
+.right-bar-container{
+    display: flex;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.right-bar-container>ul{
+    height: 100%;
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: end;
+}

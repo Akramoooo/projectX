@@ -1,0 +1,1 @@
+let color = "background-color: rgba(21, 219, 166, 0.5);"

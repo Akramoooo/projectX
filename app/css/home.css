@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic|Playfair+Display+SC:400,700&subset=latin,cyrillic);
+.main-home-container{
+    margin-top: 8em;
+    margin-left: 10em;
+}
+
+.main-home-container>ul>li>i{
+    color: white;
+    font-size: 150px;
+}
+
+.main-home-container>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-home-container>ul>li>h1{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Arimo', sans-serif;
+}
+
+.main-home-container>ul>li>p{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Arimo', sans-serif;
+    font-size: 50px;
+}
+
+
+/* CARDS CONTAINER //////// */
+
+.card-container{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card>img{
+    height: 250px;
+    width: 250px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.card>ul{
+    list-style: none;
+    color: white;
+}
+
+.card{
+    width: 250px;
+    margin: 15px;
+    border: 1px solid rgba(250, 250, 250, 0.534);
+    backdrop-filter: blur(5px);
+    border-radius: 6px;
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.card ul>li>button{
+    width: 100%;
+    border: none;
+    background-color: rgba(17, 179, 17, 0.911);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 10px;
+    padding-inline:0;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+
+
+.card ul>li>button:hover{
+    background-color:  rgba(25, 231, 25, 0.911);;
+    transition: background-color 0.7s ease;
+}
+
+.card-name, .card-price, .card-desc{
+    margin: 10px;
+    margin-inline: 0;
+}
