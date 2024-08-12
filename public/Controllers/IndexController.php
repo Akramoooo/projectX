@@ -10,7 +10,7 @@ use Laminas\Diactoros\Response\JsonResponse;
 class IndexController {
 
     public $db;
-    public $view;
+    public $view;   
 
     public function __construct(PDO $pdo, QueryFactory $query, Engine $view)
     {
@@ -23,14 +23,25 @@ class IndexController {
         $cards = $this->db->getAll("cards");
         $categories = $this->db->getAll("categories");
         $responseContent = '';
-        $responseContent .= $this->view->render('home', ["cards" => $cards, "categories" => $categories]);
+        $responseContent = $this->view->render('home', ["cards" => $cards, "categories" => $categories]);
         return new HtmlResponse($responseContent);
     }
 
     public function about()
     {
-        return new HtmlResponse("about");
+        $responseContent = $this->view->render('about');
+        return new HtmlResponse($responseContent);
     }
+
+    public function services()
+    {
+        $responseContent = $this->view->render('services');
+        return new HtmlResponse($responseContent);
+    }
+
+
+
+
 
 
 

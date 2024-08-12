@@ -120,12 +120,14 @@ function cardsRender(data){
 
 
 // DATE AND ANIMATION
-
-var timeElement = document.getElementById('currentTime');
+window.addEventListener("load", () => {
+  var timeElement = document.getElementById('currentTime');
 setInterval(function () {
   var currentTime = new Date();
   timeElement.textContent = currentTime.toLocaleTimeString();
 }, 1000);
+
+});
 
 
 const cards = document.querySelectorAll(".card");

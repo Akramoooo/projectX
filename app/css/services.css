@@ -1,0 +1,38 @@
+.services-container{
+    margin-left: 7em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 5em;
+    text-align: center;
+}
+
+.services-container>h1{
+    color: white;
+    margin-bottom: 2em;
+}
+
+.services-container>i{
+    color: white;
+    font-size: 150px;
+}
+.service-card{
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;    
+    width: 700px;
+    margin-inline: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-card>img{
+    width: 300px;
+}
+
+.service-card>p{
+    margin: 8px;
+    color: white;
+}

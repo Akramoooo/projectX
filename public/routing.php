@@ -36,6 +36,7 @@ $app = AppFactory::create();
 // Определяем маршруты
 $app->get('/', [IndexController::class, 'index']);
 $app->get('/about', [IndexController::class, 'about']);
+$app->get('/services', [IndexController::class, 'services']);
 
 
 // COMMUNICATE WITH JAVASCRIPT

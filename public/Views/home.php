@@ -2,7 +2,7 @@
 <div class="main-home-container">
     <ul>
         <li>
-            <i class="fa fa-question-circle-o" style="color: white;"></i>
+            <i class="fa fa-question-circle-o" ></i>
             <h1>Made by Akramooo</h1>
                 <p><time id="currentTime"></time></p>
         </li>
@@ -40,3 +40,6 @@
     </div>
     
 </div>
+
+<script src="/js/home/home.js"></script>
+<script src="js/home/search.js"></script>

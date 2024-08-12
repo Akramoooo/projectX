@@ -1,18 +1,18 @@
 <div class="bar-main-container">
     <ul>
-        <a href="#">
+        <a href="/">
             <li>
                 <i class="fa fa-home"></i>
                 <span>Home</span>
             </li>
         </a>
-        <a href="#">
+        <a href="/about">
             <li>
                 <i class="fa fa-info"></i>
                 <span>About</span>
             </li>
         </a>
-        <a href="#">
+        <a href="/services">
             <li>
                 <i class="fa fa-handshake-o"></i>
                 <span>Services</span>

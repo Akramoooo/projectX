@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="text/css" href="css/right-bar.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="css/search.css">
+  <link rel="stylesheet" type="text/css" href="css/about.css">
+  <link rel="stylesheet" type="text/css" href="css/services.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title><?=$this->e($title)?></title>
@@ -28,6 +30,4 @@
   </div>
 
   </body>
-  <script src="js/home/home.js"></script>
-  <script src="js/home/search.js"></script>
 </html>
