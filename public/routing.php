@@ -37,6 +37,7 @@ $app = AppFactory::create();
 $app->get('/', [IndexController::class, 'index']);
 $app->get('/about', [IndexController::class, 'about']);
 $app->get('/services', [IndexController::class, 'services']);
+$app->get('/news', [IndexController::class, 'news']);
 
 
 // COMMUNICATE WITH JAVASCRIPT

@@ -18,13 +18,7 @@
                 <span>Services</span>
             </li>
         </a>
-        <a href="#">
-            <li>
-                <i class="fa fa-address-book"></i>
-                <span>Contacts</span>
-            </li>
-        </a>
-        <a href="#">
+        <a href="/news">
             <li>
                 <i class="fa fa-newspaper-o"></i>
                 <span>News</span>

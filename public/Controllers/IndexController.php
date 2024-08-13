@@ -21,6 +21,7 @@ class IndexController {
     public function index()
     {
         $cards = $this->db->getAll("cards");
+        // $images = $this->db->getAll("images");
         $categories = $this->db->getAll("categories");
         $responseContent = '';
         $responseContent = $this->view->render('home', ["cards" => $cards, "categories" => $categories]);
@@ -35,13 +36,17 @@ class IndexController {
 
     public function services()
     {
-        $responseContent = $this->view->render('services');
+        $services = $this->db->getAll("services");
+        $responseContent = $this->view->render('services', ['services' => $services]);
         return new HtmlResponse($responseContent);
     }
 
-
-
-
+    public function news()
+    {
+        $news = $this->db->getAll("news");
+        $responseContent = $this->view->render('news', ['news' => $news]);
+        return new HtmlResponse($responseContent);
+    }
 
 
 

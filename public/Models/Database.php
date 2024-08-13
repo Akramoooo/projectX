@@ -54,23 +54,33 @@ class Database{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getDefinitive($table, $column1 = null , $word = null)
+    public function getWhere($table, $data)
+    {
+        $sql = "SELECT * FROM $table WHERE $data[0] = :$data[0]";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(":$data[0]", $data[1], PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getDefinitive($table, $column1 = null, $word = null)
     {
         $sql = "SELECT * FROM " . $table; // Базовый запрос
-
-    if ($column1 !== null && $word !== null) {
-        $sql .= " WHERE " . $column1 . " LIKE :word"; // Добавляем WHERE с LIKE
+    
+        if ($column1 !== null && $word !== null) {
+            $sql .= " WHERE " . $column1 . " LIKE :word"; // Добавляем WHERE с LIKE
+        }
+    
+        $stmt = $this->pdo->prepare($sql); // Подготавливаем запрос
+    
+        if ($column1 !== null && $word !== null) {
+            $stmt->bindValue(':word', '%' . $word . '%'); // Привязываем значение с %
+        }
+    
+        $stmt->execute(); // Выполняем запрос
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC); // Извлекаем результаты
+    
+        return $results ?: []; // Возвращаем результаты, либо пустой массив
     }
-
-    $stmt = $this->pdo->prepare($sql); // Подготавливаем запрос
-
-    if ($column1 !== null && $word !== null) {
-        $stmt->bindValue(':word', '%' . $word . '%'); // Привязываем значение с %
-    }
-
-    $stmt->execute(); // Выполняем запрос
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC); // Извлекаем результаты
-
-    return $results ?: []; // Возвращаем результаты, либо пустой массив
-    }
+    
 }

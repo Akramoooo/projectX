@@ -4,22 +4,12 @@
 <div class="services-container">
     <i class="fa fa-question-circle-o"></i>
     <h1>Akramooo Services</h1>
+    <?php foreach ($services as $service):?>
     <div class="service-card">
-        <img src="/images/green1.jpg" alt="service_img">
-        <p>Lorem ipsum dolor sit, amet consectetur  lorem50adipisicing elit. Dolor, nisi.</p>
+        <img src="/images/<?=$service["image"]?>" alt="service_img">
+        <p><?=$service["description"]?></p>
     </div>
-    <div class="service-card">
-        <img src="/images/green1.jpg" alt="service_img">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, nisi.</p>
-    </div>
-    <div class="service-card">
-        <img src="/images/green1.jpg" alt="service_img">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, nisi.</p>
-    </div>
-    <div class="service-card">
-        <img src="/images/green1.jpg" alt="service_img">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, nisi.</p>
-    </div>
+    <?php endforeach;?>
 </div>
 
 <script src="js/services.js"></script>
