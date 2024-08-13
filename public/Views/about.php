@@ -2,7 +2,7 @@
 
 <div class="about-container">
     <div class="first-container">
-        <img src="/images/author.jpg" alt="">
+        <img src="/images/person.jpg" alt="">
         <ul>
             <li>Name: Akramooo</li>
             <li>Age: 20</li>
